@@ -1,0 +1,27 @@
+@import url("../../styles/main.scss");
+.footer {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+}
+.footer .footer-content {
+  width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.footer .footer-content .footer-title {
+  font-size: 40px;
+}
+.footer .footer-content .footer-text {
+  font-size: 12px;
+  opacity: 0.8;
+}
+/*# sourceMappingURL=Footer.css.map */
