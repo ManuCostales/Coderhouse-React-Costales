@@ -33,12 +33,12 @@ button:focus {
 html,
 body,
 #root {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
   overflow-x: hidden;
 }
 
@@ -115,36 +115,43 @@ h6 {
 .font-base-light {
   font-family: var(--font-base);
   font-weight: var(--weight-light);
+  line-height: 1;
   font-style: normal;
 }
 
 .font-base-regular {
   font-family: var(--font-base);
   font-weight: var(--weight-regular);
+  line-height: 1;
   font-style: normal;
 }
 
 .font-upper {
   font-family: var(--font-upper);
   font-weight: var(--weight-regular);
+  line-height: 1;
   font-style: normal;
 }
 
 .font-upper-spacing {
   font-family: var(--font-upper);
   font-weight: var(--weight-regular);
+  line-height: 1;
   font-style: normal;
   letter-spacing: 7%;
+  text-transform: uppercase;
 }
 
 .font-cursive-1 {
   font-family: var(--font-cursive-1);
   font-weight: var(--weight-regular);
+  line-height: 1;
 }
 
 .font-cursive-2 {
   font-family: var(--font-cursive-2);
   font-weight: var(--weight-regular);
+  line-height: 1;
 }
 
 .color-light {
@@ -179,6 +186,7 @@ h6 {
   color: var(--color-light);
   transition: all 0.3s ease-in-out;
   display: block;
+  letter-spacing: 2px;
 }
 .link-light:hover {
   color: var(--color-light-hover);
@@ -191,6 +199,9 @@ h6 {
   font-family: var(--font-upper);
   font-weight: var(--weight-regular);
   padding: 20px 46px;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.3s;
 }
 .btn:hover {
   cursor: pointer;
@@ -204,6 +215,7 @@ h6 {
 .btn-primary:hover {
   background-color: var(--color-light);
   color: var(--color-dark);
+  border-color: var(--color-light);
 }
 
 .btn-secondary {
@@ -222,8 +234,9 @@ h6 {
   background-color: var(--color-accent-blue);
 }
 .btn-accent-blue:hover {
-  background-color: var(--color-light);
-  color: var(--color-accent-blue);
+  background-color: var(--color-accent-orange);
+  color: var(--color-accent-light);
+  border-color: var(--color-light);
 }
 
 .btn-accent-orange {
@@ -234,5 +247,9 @@ h6 {
 .btn-accent-orange:hover {
   background-color: var(--color-light);
   color: var(--color-accent-orange);
+}
+
+.main-container {
+  margin-top: 10vh;
 }
 /*# sourceMappingURL=main.css.map */

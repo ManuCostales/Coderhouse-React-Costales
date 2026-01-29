@@ -1,0 +1,93 @@
+@import "../../../styles/main.scss";
+
+.burger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: 768px){
+    display: none;
+  }
+
+}
+
+.dialog-root {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  .panel-wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 60vw;
+    max-width: 480px;
+    transform: translateX(40vw);
+    transition: transform 0.35s ease;
+  }
+
+  &[open] {
+    .panel-wrapper {
+      transform: translateX(0);
+    }
+  }
+
+  .panel {
+    height: 100%;
+    background-color: var(--color-dark);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid var(--color-light);
+  }
+
+  .close {
+    align-self: flex-end;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    a {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-light);
+    }
+  }
+}
+
+
+.dialog-root {
+
+  
+    .panel-wrapper {
+
+    }
+  
+    .enter {
+      transition: transform 0.35s ease;
+    }
+  
+    .from {
+      transform: translateX(100%);
+    }
+  
+    .to {
+      transform: translateX(0);
+    }
+  
+    .leave {
+      transition: transform 0.25s ease;
+    }
+  }
+  

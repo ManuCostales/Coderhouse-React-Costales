@@ -27,6 +27,22 @@
             gap: 40px;
             width: 60%;
 
+            @media (max-width: 980px){
+                width: 70%;
+            }
+
+            li {
+                &:nth-child(2), &:nth-child(3){
+                    @media (max-width: 767px){
+                        display: none !important;
+                    }
+                }
+            }
+
+            a {
+                font-size: 15px;
+            }
+
             .main-logo {
                 a {
                     display: flex;

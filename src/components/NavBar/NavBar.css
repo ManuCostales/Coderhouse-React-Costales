@@ -22,6 +22,14 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+
 html,
 body,
 #root {
@@ -127,6 +135,7 @@ h6 {
   font-weight: var(--weight-regular);
   font-style: normal;
   letter-spacing: 7%;
+  text-transform: uppercase;
 }
 
 .font-cursive-1 {
@@ -171,6 +180,7 @@ h6 {
   color: var(--color-light);
   transition: all 0.3s ease-in-out;
   display: block;
+  letter-spacing: 2px;
 }
 .link-light:hover {
   color: var(--color-light-hover);
@@ -253,6 +263,19 @@ h6 {
   align-items: center;
   gap: 40px;
   width: 60%;
+}
+@media (max-width: 980px) {
+  .header .nav .nav-ul {
+    width: 70%;
+  }
+}
+@media (max-width: 767px) {
+  .header .nav .nav-ul li:nth-child(2), .header .nav .nav-ul li:nth-child(3) {
+    display: none !important;
+  }
+}
+.header .nav .nav-ul a {
+  font-size: 15px;
 }
 .header .nav .nav-ul .main-logo a {
   display: flex;

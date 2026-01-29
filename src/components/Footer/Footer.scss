@@ -4,12 +4,11 @@
 .footer {
 
     width: 100vw;
-    height: 20vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-
-    position: fixed;
+    padding-top: 10vh;
     bottom: 0;
 
     .footer-content {
