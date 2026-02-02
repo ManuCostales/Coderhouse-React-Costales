@@ -1,2 +1,2 @@
-@import"../../styles/main.scss";.item-detail-container{width:90vw;height:90vh;position:fixed;background-color:#000;top:50%;left:50%;transform:translate(-50%, -50%);z-index:100;display:flex;flex-flow:column nowrap;align-items:center;justify-content:center}
+@import"../../styles/main.scss";.item-detail-container{width:100vw;height:auto;min-height:80vh;position:relative;background-color:var(--color-medium);background:linear-gradient(to bottom, var(--color-medium) 0%, var(--color-medium) 90%, var(--color-dark) 100%);display:flex;flex-flow:column nowrap;align-items:center;justify-content:center;margin-top:10vh;padding-bottom:20vh}
 /*# sourceMappingURL=ItemDetailContainer.min.css.map */

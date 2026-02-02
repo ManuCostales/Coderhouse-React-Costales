@@ -83,6 +83,12 @@
 .item-card .item-card-bottom .item-card-text h3 {
   font-size: 18px;
 }
+.item-card .item-card-bottom .item-card-text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
 .item-card .item-card-bottom .item-card-footer {
   display: flex;
   flex-flow: row wrap;

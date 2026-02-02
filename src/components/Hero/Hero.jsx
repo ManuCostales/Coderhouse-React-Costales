@@ -9,7 +9,7 @@ export const Hero = ({ images = [], titulo = "Titulo", texto = "texto", children
         <div className="text-container">
           <h1 className="font-base-regular">{titulo}</h1>
           <p className="title-overlay font-cursive-2">{titulo}</p>
-          <p className="text">{texto}</p>
+          <p className="text color-light font-base-light">{texto}</p>
           {children}
         </div>
 

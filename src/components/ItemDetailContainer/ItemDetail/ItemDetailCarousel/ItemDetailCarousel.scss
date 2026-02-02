@@ -1,0 +1,71 @@
+$transition: 0.45s ease;
+$inactive-opacity: 0.15;
+$inactive-scale: 0.85;
+
+.item-detail-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  z-index: 3;
+  
+
+  .embla {
+    overflow: hidden;
+    height: 100%;
+
+    &__container {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    &__slide {
+        height: 100%;
+      flex: 0 0 60%;
+      display: flex;
+      justify-content: center;
+      opacity: $inactive-opacity;
+      transition: transform $transition, opacity $transition;
+      //transform: scale(0.8);
+
+      img {
+        width: 80vw;
+        height: 50vh;
+        object-fit: cover;
+        display: block;
+        max-height: 50vh;
+      }
+
+      &.is-active {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+
+    &.left {
+      left: -50px;
+    }
+
+    &.right {
+      right: -50px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

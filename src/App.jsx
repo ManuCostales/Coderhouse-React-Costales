@@ -24,12 +24,12 @@ const App = () => {
       <BrowserRouter>
       <NavBar></NavBar>
         <Routes>
+
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/acerca" element={<Acerca></Acerca>}></Route>
           <Route path="/trabajos" element={<Trabajos></Trabajos>}></Route>
-          <Route path="/detail/:id" element={<ItemDetailContainer></ItemDetailContainer>}></Route>
-          <Route path="/category/:idCategory" element={<ItemListContainer></ItemListContainer>}></Route>
-          {/* <Route path="*" element={<Error></Error>}></Route> */}
+          <Route path="/trabajos/:idCategory" element={<Trabajos></Trabajos>}></Route>
+          <Route path="/trabajos/:idCategory/:id" element={<ItemDetailContainer></ItemDetailContainer>}></Route>
 
         </Routes>
 

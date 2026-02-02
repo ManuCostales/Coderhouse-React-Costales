@@ -6,7 +6,23 @@
   justify-content: flex-end;
   position: relative;
   min-height: 90vh;
-  padding: 0 5vw 5vw 5vw;
+  padding: 0 5vw 2.5vw 5vw;
+}
+.hero .scroll-down {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  opacity: 0.5;
+  transform: translateY(-100vh);
+  -webkit-animation: heroAnimation3 1s ease-out 0.5s forwards;
+          animation: heroAnimation3 1s ease-out 0.5s forwards;
+  transition: 0.3s all;
+}
+.hero .scroll-down:hover {
+  opacity: 1;
 }
 .hero .text-container {
   width: 100%;
@@ -27,6 +43,8 @@
   display: block;
   position: relative;
   font-size: 7rem;
+  -webkit-animation: heroAnimation1 1s ease;
+          animation: heroAnimation1 1s ease;
 }
 .hero .title-overlay {
   z-index: 2;
@@ -49,5 +67,66 @@
   text-align: left;
   max-width: 60%;
   line-height: 1.5;
+  opacity: 0;
+  -webkit-animation: heroAnimation2 1s ease-out 0.5s forwards;
+          animation: heroAnimation2 1s ease-out 0.5s forwards;
+}
+
+@-webkit-keyframes heroAnimation1 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heroAnimation1 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes heroAnimation2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes heroAnimation2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes heroAnimation3 {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes heroAnimation3 {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 /*# sourceMappingURL=Hero.css.map */

@@ -8,6 +8,36 @@ const imagenes = [
     '../../../public/mueble-6.webp',
 ]
 
+//Import de imagenes:
+
+import imgMuebles from "../../assets/muebles.svg"
+import imgMesas from "../../assets/mesas.svg"
+import imgLamparas from "../../assets/lamparas-1.svg"
+import imgAdornos from "../../assets/adornos.svg"
+
+const categorias = [
+    {
+        id: 0,
+        name: 'muebles',
+        img: imgMuebles
+    },
+    {
+        id: 1,
+        name: 'mesas',
+        img: imgMesas
+    },
+    {
+        id: 2,
+        name: 'lamparas',
+        img: imgLamparas
+    },
+    {
+        id: 3,
+        name: 'adornos',
+        img: imgAdornos
+    }
+];
+
 const items = [
     {
         id: 0,
@@ -15,8 +45,7 @@ const items = [
         descr: 'Este es un mueble de madera.',
         price: 50000,
         image: '../../../public/mueble-1.jpeg',
-        url: '/mueble-madera-1',
-        category: 'mueble',
+        category: 'muebles',
         stock: 10,
         
         //Mas detalles:
@@ -34,7 +63,7 @@ const items = [
         descr: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia molestiae voluptatum earum ratione reiciendis debitis dicta, repellendus quo facilis veritatis!',
         price: 50000,
         image: '../../../public/mueble-2.webp',
-        url: '/mueble-madera-2',
+        category: 'muebles',
 
         //Mas detalles:
         images: imagenes,
@@ -51,7 +80,7 @@ const items = [
         descr: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt nostrum inventore laudantium asperiores libero corporis quibusdam ex cupiditate error tenetur quia numquam alias expedita praesentium mollitia illo ipsa sint ducimus adipisci quidem, delectus, minima natus ad. Totam ipsa iste ipsam quasi voluptatem, sint fugit nesciunt, quidem repudiandae excepturi expedita necessitatibus.",
         price: 50000,
         image: '../../../public/mueble-3.webp',
-        url: '/mueble-madera-3',
+        category: 'muebles',
 
         //Mas detalles:
         images: imagenes,
@@ -68,7 +97,7 @@ const items = [
         descr: 'Este es un mueble de madera.',
         price: 50000,
         image: '../../../public/mueble-4.jpg',
-        url: '/mueble-madera-4',
+        category: 'muebles',
 
         //Mas detalles:
         images: imagenes,
@@ -85,7 +114,7 @@ const items = [
         descr: 'Este es un mueble de madera.',
         price: 50000,
         image: '../../../public/mueble-5.jpg',
-        url: '/mueble-madera-5',
+        category: 'muebles',
 
         //Mas detalles:
         images: imagenes,
@@ -102,7 +131,7 @@ const items = [
         descr: 'Este es un mueble de madera.',
         price: 50000,
         image: '../../../public/mueble-6.webp',
-        url: '/mueble-madera-5',
+        category: 'muebles',
 
         //Mas detalles:
         images: imagenes,
@@ -119,7 +148,7 @@ const items = [
         descr: 'Este es un mueble de madera.',
         price: 50000,
         image: '../../../public/mueble-1.jpeg',
-        url: '/mueble-madera-5',
+        category: 'muebles',
 
         //Mas detalles:
         images: imagenes,
@@ -132,14 +161,14 @@ const items = [
     },
     {
         id: 7,
-        name: 'Mueble de Madera 8',
-        descr: 'Este es un mueble de madera.',
+        name: 'Lampara 1',
+        descr: 'Esta es una lampara de madera',
         price: 50000,
-        image: '../../../public/mueble-1.jpeg',
-        url: '/mueble-madera-5',
+        image: '../../../public/lampara-1.jpeg',
+        category: 'lamparas',
 
         //Mas detalles:
-        images: imagenes,
+        images: ['../../../public/lampara-1.jpeg', '../../../public/lampara-2.jpeg', "../../../public/lampara-3.jpeg"],
         height: 2.4,
         width: 1.80,
         weight: 6.8,
@@ -149,14 +178,14 @@ const items = [
     },
     {
         id: 8,
-        name: 'Mueble de Madera 9',
-        descr: 'Este es un mueble de madera.',
+        name: 'Lampara de Madera 9',
+        descr: 'Esta es una lampara de madera',
         price: 50000,
-        image: '../../../public/mueble-1.jpeg',
-        url: '/mueble-madera-5',
+        image: '../../../public/lampara-4.jpeg',
+        category: 'lamparas',
 
         //Mas detalles:
-        images: imagenes,
+        images: ["../../../public/lampara-4.jpeg", "../../../public/lampara-5.jpeg"],
         height: 2.4,
         width: 1.80,
         weight: 6.8,
@@ -166,14 +195,14 @@ const items = [
     },
     {
         id: 9,
-        name: 'Mueble de Madera 10',
-        descr: 'Este es un mueble de madera.',
+        name: 'Mesa de Madera 10',
+        descr: 'Esta es una mesa de madera',
         price: 50000,
-        image: '../../../public/mueble-1.jpeg',
-        url: '/mueble-madera-5',
+        image: '../../../public/mesa-3.jpeg',
+        category: 'mesas',
 
         //Mas detalles:
-        images: imagenes,
+        images: ['../../../public/mesa-3.jpeg', '../../../public/mesa-4.jpeg'],
         height: 2.4,
         width: 1.80,
         weight: 6.8,
@@ -183,14 +212,14 @@ const items = [
     },
     {
         id: 10,
-        name: 'Mueble de Madera 11',
-        descr: 'Este es un mueble de madera.',
+        name: 'Mesa de Madera 11',
+        descr: 'Esta es una mesa de madera',
         price: 50000,
-        image: '../../../public/mueble-1.jpeg',
-        url: '/mueble-madera-5',
+        image: '../../../public/mesa-1.jpeg',
+        category: 'mesas',
 
         //Mas detalles:
-        images: imagenes,
+        images: ['../../../public/mesa-1.jpeg', '../../../public/mesa-2.jpeg'],
         height: 2.4,
         width: 1.80,
         weight: 6.8,
@@ -199,15 +228,15 @@ const items = [
         ]
     },
     {
-        id: 11,
-        name: 'Mueble de Madera 12',
-        descr: 'Este es un mueble de madera.',
+        id: 8,
+        name: 'Lampara de Madera 12',
+        descr: 'Esta es una lampara de madera',
         price: 50000,
-        image: '../../../public/mueble-1.jpeg',
-        url: '/mueble-madera-5',
+        image: '../../../public/lampara-4.jpeg',
+        category: 'lamparas',
 
         //Mas detalles:
-        images: imagenes,
+        images: ["../../../public/lampara-4.jpeg", "../../../public/lampara-5.jpeg"],
         height: 2.4,
         width: 1.80,
         weight: 6.8,
@@ -222,18 +251,19 @@ function exportItems(){
     return new Promise ( (resolve, reject) => {
         setTimeout(() => {
             if (2 + 2 === 4){
-                resolve(items.map(item => {
+                // resolve(items.map(item => {
 
-                    return {
-                        id: item.id,
-                        name: item.name,
-                        descr: item.descr,
-                        price: item.price,
-                        image: item.image,
-                        url: item.url
-                    }
+                //     return {
+                //         id: item.id,
+                //         name: item.name,
+                //         descr: item.descr,
+                //         price: item.price,
+                //         image: item.image,
+                //         url: item.url
+                //     }
 
-                }));
+                // }));
+                resolve(items);
             }
             else {
                 reject('Error de Conexión');
@@ -270,12 +300,34 @@ export function exportSingleItem(id){
 
 }
 
+export function getAllCategories() {
+
+    return new Promise ((resolve, reject) => {
+
+        setTimeout(() => {
+            
+            if (categorias){
+                resolve(categorias);
+            }
+            else {
+                reject("No se han encontrado categorias");
+            }
+
+        }, 1000);
+
+    })
+
+}
+
 export function exportItemsByCategory(id){
+
+    console.log("CATEGORIA:" + id);
 
     return new Promise ((resolve, reject) => {
 
         setTimeout(() => {
             if (id) {
+                console.log(items.filter(item => item.category === id))
                 resolve(items.filter(item => item.category === id));
             }
             else {

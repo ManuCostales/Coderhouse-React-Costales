@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 60px;
   background-image: url("../../../public/heroBackground1.png");
@@ -14,12 +14,77 @@
   padding: 5vw 5vw 5vw 5vw;
 }
 .item-list-container h2 {
-  text-align: center;
-  width: 100%;
+  text-align: left;
   font-size: 3rem;
 }
 .item-list-container * {
   z-index: 3;
+}
+.item-list-container .item-list-upper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  z-index: 4;
+}
+.item-list-container .item-list-upper .item-list-upper-right {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 30px;
+}
+.item-list-container .item-list-upper .selector-categorias {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 30px;
+}
+.item-list-container .item-list-upper .selector-categorias button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  width: auto;
+  border-bottom: 1px solid var(--color-light);
+  padding: 10px 40px;
+  position: relative;
+  text-transform: capitalize;
+  min-width: 190px;
+}
+.item-list-container .item-list-upper .selector-categorias button img {
+  width: 30px;
+  height: 30px;
+}
+.item-list-container .item-list-upper .selector-categorias .dropdown-options {
+  position: absolute;
+  top: 100%;
+  z-index: 99;
+  width: 100%;
+  display: block;
+  border: 1px solid var(--color-light);
+  border-top: none;
+  background-color: var(--color-dark);
+  text-transform: capitalize;
+}
+.item-list-container .item-list-upper .selector-categorias .dropdown-options a {
+  border-bottom: 1px solid var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 10px;
+}
+.item-list-container .item-list-upper .selector-categorias .dropdown-options a:hover {
+  cursor: pointer;
+  background-color: var(--color-accent-orange);
+}
+.item-list-container .item-list-upper .selector-categorias .dropdown-options a img {
+  width: 30px;
+  height: 30px;
 }
 .item-list-container .item-list {
   width: 100%;

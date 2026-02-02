@@ -5,11 +5,16 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+}
+
 * {
   margin: 0;
   line-height: 1;
   margin: 0;
   padding: 0;
+  color: #E8E0D1;
 }
 
 html {
