@@ -64,6 +64,7 @@ const items = [
         price: 50000,
         image: '../../../public/mueble-2.webp',
         category: 'muebles',
+        stock: 26,
 
         //Mas detalles:
         images: imagenes,
@@ -81,6 +82,7 @@ const items = [
         price: 50000,
         image: '../../../public/mueble-3.webp',
         category: 'muebles',
+        stock: 34,
 
         //Mas detalles:
         images: imagenes,
@@ -98,6 +100,7 @@ const items = [
         price: 50000,
         image: '../../../public/mueble-4.jpg',
         category: 'muebles',
+        stock: 3,
 
         //Mas detalles:
         images: imagenes,
@@ -115,6 +118,7 @@ const items = [
         price: 50000,
         image: '../../../public/mueble-5.jpg',
         category: 'muebles',
+        stock: 5,
 
         //Mas detalles:
         images: imagenes,
@@ -132,6 +136,7 @@ const items = [
         price: 50000,
         image: '../../../public/mueble-6.webp',
         category: 'muebles',
+        stock: 22,
 
         //Mas detalles:
         images: imagenes,
@@ -149,6 +154,7 @@ const items = [
         price: 50000,
         image: '../../../public/mueble-1.jpeg',
         category: 'muebles',
+        stock: 61,
 
         //Mas detalles:
         images: imagenes,
@@ -166,6 +172,7 @@ const items = [
         price: 50000,
         image: '../../../public/lampara-1.jpeg',
         category: 'lamparas',
+        stock: 122,
 
         //Mas detalles:
         images: ['../../../public/lampara-1.jpeg', '../../../public/lampara-2.jpeg', "../../../public/lampara-3.jpeg"],
@@ -183,6 +190,7 @@ const items = [
         price: 50000,
         image: '../../../public/lampara-4.jpeg',
         category: 'lamparas',
+        stock: 4,
 
         //Mas detalles:
         images: ["../../../public/lampara-4.jpeg", "../../../public/lampara-5.jpeg"],
@@ -200,6 +208,7 @@ const items = [
         price: 50000,
         image: '../../../public/mesa-3.jpeg',
         category: 'mesas',
+        stock: 9,
 
         //Mas detalles:
         images: ['../../../public/mesa-3.jpeg', '../../../public/mesa-4.jpeg'],
@@ -217,6 +226,7 @@ const items = [
         price: 50000,
         image: '../../../public/mesa-1.jpeg',
         category: 'mesas',
+        stock: 5,
 
         //Mas detalles:
         images: ['../../../public/mesa-1.jpeg', '../../../public/mesa-2.jpeg'],
@@ -234,6 +244,7 @@ const items = [
         price: 50000,
         image: '../../../public/lampara-4.jpeg',
         category: 'lamparas',
+        stock: 32,
 
         //Mas detalles:
         images: ["../../../public/lampara-4.jpeg", "../../../public/lampara-5.jpeg"],

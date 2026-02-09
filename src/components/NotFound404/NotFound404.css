@@ -1,0 +1,31 @@
+@import url(".././../styles/main.scss");
+.not-found-container {
+  height: 90vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(to top, #0F0600, transparent), url("../../../public/heroBackground1.png") center/cover no-repeat;
+}
+.not-found-container img {
+  max-width: 200px;
+  height: auto;
+}
+.not-found-container h1 {
+  font-size: 2.5rem;
+}
+.not-found-container h2 {
+  font-size: 1.5rem;
+}
+.not-found-container .not-found-botones {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+.not-found-container .not-found-botones button {
+  min-width: 250px;
+}
+/*# sourceMappingURL=NotFound404.css.map */

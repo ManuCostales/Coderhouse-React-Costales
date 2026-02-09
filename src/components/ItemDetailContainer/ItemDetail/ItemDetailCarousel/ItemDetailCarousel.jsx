@@ -33,7 +33,6 @@ export function ItemDetailCarousel({imagenes}) {
           <div className="embla__container">
             {imagenes.map((src, index) => 
             {
-                console.log(src)
                 return (<div
                     key={index}
                     className={`embla__slide ${
@@ -43,7 +42,6 @@ export function ItemDetailCarousel({imagenes}) {
                     <img src={src} alt="" />
                   </div>)
             }
-            
               
             )}
           </div>

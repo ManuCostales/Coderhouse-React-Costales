@@ -1,0 +1,71 @@
+@import url("../../../../styles/main.scss");
+
+.item-count {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+
+    .price-unit {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        line-height: 1;
+        h6 {
+            font-size: 1.2rem;
+        }
+    }
+
+    .details-price {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        gap: 20px;
+        line-height: 1;
+        
+        h6 {
+            font-size: 2rem;
+        }
+    }
+
+    .quantity-container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 10px;
+        .quantity {
+            display: flex;
+            flex-flow: row nowrap;
+            button {
+                width: 40px;
+                height: 40px;
+                border: 1px solid var(--color-light);
+                transition: 0.3s all;
+                &:hover {
+                    background-color: var(--color-light);
+                    color: var(--color-dark);
+                }
+                & .add {
+                    border-right: none;
+                }
+                & .res {
+                    border-left: none;
+                }
+            }
+            p {
+                height: 40px;
+                width: 100px;
+                border: 1px solid var(--color-light);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .inactive {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+
+}
