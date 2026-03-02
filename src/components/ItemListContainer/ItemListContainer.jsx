@@ -1,15 +1,14 @@
 
 import React, {useState, useEffect, forwardRef, useRef} from "react";
 import './ItemListContainer.scss';
-import exportItems from '../MockAsync/MockAsync'
 import ItemCard from "./ItemCard/ItemCard";
 import '../Hero/Carousel/Carousel.scss'
 import { ClipLoader } from "react-spinners";
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
-import {exportItemsByCategory} from '../MockAsync/MockAsync'
-import {getAllCategories} from '../MockAsync/MockAsync'
 import imgTodo from "../../assets/todo.svg"
 import { useParams, Link } from "react-router-dom";
+
+//Importo funciones para acceder a la DB:
+import { getAllProducts, getProductsByCategory, getCategories } from "../../services/config";
 
 const ItemListContainer = forwardRef((props, ref) => {
 
@@ -28,17 +27,14 @@ const ItemListContainer = forwardRef((props, ref) => {
 
         setLoading(true);
 
-        const getProducts = idCategory ? exportItemsByCategory : exportItems;
+        const getProducts = idCategory ? getProductsByCategory : getAllProducts;
 
         //Cargo productos:
         getProducts(idCategory)
             .then((data) => {
-                console.log(idCategory)
-                console.log(data);
                 setItems(data);
             })
             .catch((error) => {
-                console.log(error);
                 setError(error);
 
             })
@@ -47,13 +43,11 @@ const ItemListContainer = forwardRef((props, ref) => {
             })
 
         //Cargo categorias:
-        getAllCategories()
+        getCategories()
             .then((data) => {
-                console.log(data);
                 setCategories(data);
             })
             .catch((error) => {
-                console.log(error);
                 setError(error);
             })
 
@@ -93,20 +87,11 @@ const ItemListContainer = forwardRef((props, ref) => {
         };
       }, [open]);
 
-    //Handle click para cada card
-
-    const handleClick = (id) => {
-        
-        console.log(id);
-
-    }
-
     //Para mostrar contenido:
 
     let content = '';
 
     if (loading){
-        //content = <p>Cargando Items...</p>
         content = <ClipLoader color="#FFF" size={50}/>
     }
     else if (error !== false){
@@ -117,9 +102,12 @@ const ItemListContainer = forwardRef((props, ref) => {
     }
     else {
         content = <ul className="item-list">{items.map( (item)=> {
-            console.log(item);
-            return <ItemCard onClick={handleClick} key={item.id} id={item.id} name={item.name} descr={item.descr} price={item.price} image={item.image} url={`/trabajos/${item.category}/${item.id}`}></ItemCard>
-
+            if (item.stock <= 0){
+                return;
+            }
+            else {
+                return <ItemCard  key={item.id} id={item.id} name={item.name} descr={item.descr} price={item.price} image={item.image} url={`/trabajos/${item.category}/${item.id}`}></ItemCard>
+            }
         })}</ul>
     }
 

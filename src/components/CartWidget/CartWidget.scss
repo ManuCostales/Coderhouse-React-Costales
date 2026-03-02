@@ -1,13 +1,32 @@
+@import url("../../styles/main.scss");
+
 /*START*/
 
 .cartwidget {
-    background-image: url("../../assets/cart.svg");
-    background-size: cover;
-    background-position: center;
-    width: 40px;
-    height: 40px;
+    
     transition: all 0.3s ease-out;
-    &:hover {
-        background-image: url("../../assets/cart-filled.svg");
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    // border: 1px solid var(--color-light);
+    // padding: 10px 20px;
+    // border-radius: 10px;
+
+    span {
+        width: 50px;
+        height: 50px;
+        background-image: url("../../assets/cart.svg");
+        background-size: cover;
+        background-position: center;
+        transition: all 0.3s ease-out;
     }
+
+    &:hover {
+        span {
+        
+            background-image: url("../../assets/cart-filled.svg");
+
+    }
+    }
+
 }

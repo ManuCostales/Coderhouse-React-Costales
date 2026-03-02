@@ -1,33 +1,38 @@
 import React, {useState, useEffect} from 'react'
-import {exportSingleItem} from '../MockAsync/MockAsync'
 import { ClipLoader } from "react-spinners";
 import {ItemDetail} from "./ItemDetail/ItemDetail";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './ItemDetailContainer.scss'
+
+import { getSingleProduct } from '../../services/config';
+
+//firebase
 
 export const ItemDetailContainer = () => {
 
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(null);
 
   const {id} = useParams();
-  console.log(id);
 
-  useEffect(() => {
+  useEffect (() => {
 
-    exportSingleItem(id)
-        .then((data) => {
-            console.log(data);
-            setItem(data);
-        })
-        .catch(error => {
-            console.log(error);
-            setError(error);
-        })
-        .finally(() => {
-            setLoading(false);
-        })
+    setLoading(true);
+    setError(null);
+    setItem(null);
+
+    getSingleProduct(id)
+      .then((data) => {
+        setItem(data);
+      })
+      .catch((error) => {
+        setError(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      })
+
 
   }, [id])
 
@@ -36,8 +41,26 @@ export const ItemDetailContainer = () => {
   if (loading){
     content = <ClipLoader color="#FFF" size={50}></ClipLoader>
   }
-  else if (error !== false){
-    content = <p>{error}</p>
+  else if (error){
+    content = <div style={{
+      display: 'flex',
+      flexFlow: 'column',
+      gap: '20px'
+    }}><p className='font-base-regular' style={{
+      fontSize: '1.4rem'
+    }}>{error}</p>
+    <div style={{
+      display: 'flex',
+      flexFlow: 'row',
+      gap: '20px'
+    }}>
+    <Link to="/"><button className='btn btn-primary'>HOMEPAGE</button></Link>
+    <Link to="/trabajos"><button className='btn btn-primary-filled'>MIS TRABAJOS</button></Link>
+    </div>
+    </div>
+  }
+  else if (!item){
+    content = <p>Producto no encontrado</p>
   }
   else {
     content = <ItemDetail item={item}></ItemDetail>
@@ -47,7 +70,6 @@ export const ItemDetailContainer = () => {
     <div className='item-detail-container'>
     {content}
     </div>
-    
   )
 
 

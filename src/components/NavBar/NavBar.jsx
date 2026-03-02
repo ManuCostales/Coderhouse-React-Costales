@@ -16,9 +16,6 @@ const NavBar = () => {
                         <span className="font-cursive-1">Claudio</span>
                         <span className="font-cursive-1">Costales</span>
                     </NavLink>
-                    {/* <a href="" >
-                        
-                    </a> */}
                 </li>
                 <li><NavLink className="font-upper link-light" to="/acerca">ACERCA DE MÍ</NavLink></li>
                 <li><NavLink className="font-upper link-light" to="/trabajos">MIS TRABAJOS</NavLink></li>

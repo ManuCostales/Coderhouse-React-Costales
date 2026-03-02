@@ -268,6 +268,11 @@ h6 {
   color: var(--color-light);
 }
 
+.success-btn {
+  text-transform: uppercase;
+  opacity: 1;
+}
+
 .main-container {
   margin-top: 10vh;
 }

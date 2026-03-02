@@ -1,38 +1,29 @@
 import React, {useRef, useEffect, useState} from 'react'
-import imgBuy from "../../../../assets/buy.svg"
 import {Link, useNavigate} from 'react-router-dom'
 import './ItemCount.scss';
 
 
 
-export const ItemCount = ({itemPrice, itemStock, idCategory, quantity, setQuantity}) => {
+export const ItemCount = ({itemPrice, itemStock, quantity, onChange }) => {
 
   const navigate = useNavigate();
-
-  const [totalPrice, setTotalPrice] = useState(itemPrice);
-  const [currentItemStock, setCurrentItemStock] = useState(itemStock - 1);
   
   const sumButtonRef = useRef(null);
   const resButtonRef = useRef(null);
 
   const handleSum = () => {
-    if (currentItemStock <= 0){
-        return;
-    }
-    setQuantity(prev => prev + 1);
-    setTotalPrice(prev => prev + itemPrice);
-    setCurrentItemStock(prev => prev - 1);
+    if (quantity >= itemStock) return;
+    onChange(quantity + 1);
   }
+
 
   const handleRes = () => {
-    if (quantity <= 1){
-        return;
-    }
-    setQuantity(prev => prev - 1);
-    setTotalPrice(prev => prev - itemPrice);
-    setCurrentItemStock(prev => prev + 1);
+    if (quantity <= 1) return;
+    onChange(quantity - 1);
   }
 
+  const totalPrice = itemPrice * quantity;
+  const currentItemStock = itemStock - quantity;
 
   return (
     <div className="item-count">

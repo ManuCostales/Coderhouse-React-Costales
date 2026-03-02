@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import Carousel from './Carousel/Carousel';
 import './Hero.scss'
 

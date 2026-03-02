@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <main className='main-container'>
 
-        <Hero images={["/heroBackground1.png", "/heroBackground2.png", "/heroBackground3.png"]} titulo='Bienvenidos' texto='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'>
+        <Hero images={["/heroBackground1.png", "/heroBackground2.png", "/heroBackground3.png"]} titulo='Bienvenidos' texto='En nuestro taller la madera cobra vida. Cada mueble, estante o pieza decorativa nace del cuidado por el detalle y del respeto por los materiales nobles. Trabajamos combinando técnicas tradicionales de carpintería con diseños actuales, creando productos funcionales que también aportan calidez y personalidad a cada espacio. Creemos que un buen mueble no solo ocupa un lugar en tu hogar, sino que forma parte de tu historia cotidiana.'>
         <div className="button-container">
           <Link to="/acerca"><button className='btn btn-primary'>ACERCA DE</button></Link>
           <Link to="/trabajos"><button className='btn btn-primary'>MIS TRABAJOS</button></Link>

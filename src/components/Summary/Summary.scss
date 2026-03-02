@@ -1,0 +1,39 @@
+
+@import url("../../styles/main.scss");
+
+.cart-details {
+    width: auto;
+    min-width: 400px;
+    border-left: 1px solid var(--color-light);
+    padding: 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    height: 100%;
+    margin-left: 10vh;
+
+    ul {
+        display: flex;
+        flex-flow: column;
+        gap: 20px;
+        width: 100%;
+        li {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+        border-bottom: solid 1px var(--color-light);
+        padding-bottom: 40px;
+    }
+
+    .total-price {
+        
+        font-size: 1rem;
+        span {
+            font-size: 1.5rem;
+        }
+    }
+
+}

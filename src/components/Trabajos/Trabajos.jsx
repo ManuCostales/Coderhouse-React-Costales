@@ -19,7 +19,7 @@ export const Trabajos = () => {
   return (
     <main className='main-container'>
 
-        <Hero images={["/works-1.jpg", "/works-2.jpg", "/works-3.jpg"]} titulo='Mis Trabajos' texto='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'>
+        <Hero images={["/works-1.jpg", "/works-2.jpg", "/works-3.jpg"]} titulo='Mis Trabajos' texto='Te invitamos a recorrer nuestra tienda y descubrir piezas únicas, hechas con pasión y dedicación. Si buscás algo especial o personalizado, estamos listos para transformar tu idea en realidad y crear algo pensado exclusivamente para vos y tu espacio.'>
         <button onClick={scrollTo} className='scroll-down'><img src={downArrow}></img></button>
         </Hero>
         

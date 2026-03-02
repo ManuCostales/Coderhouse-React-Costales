@@ -26,7 +26,7 @@ export const ItemCard = ({id, category, name, descr, price, image, url, onClick}
                   <span className="item-card-button btn btn-accent-blue">
                     VER MÁS
                   </span>
-                  <p className="font-base-regular">${price}</p>
+                  <p className="font-base-regular">${price.toLocaleString("es-AR")}</p>
                 </div>
               </div>
 

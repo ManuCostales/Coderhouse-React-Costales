@@ -9,10 +9,11 @@
     display: flex;
     flex-flow: column;
     padding: 10vh 10vh;
+    gap: 60px;
 
     .close {
-        position: absolute;
-        top: 30px;
+        position: fixed;
+        top: 12vh;
         right: 30px;
         width: 30px;
         height: 30px;
@@ -22,6 +23,23 @@
         transition: 0.3s all;
         &:hover {
             transform: scale(1.2);
+        }
+    }
+
+    .close-2 {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        width: 30px;
+        height: 30px;
+        background-image: url("../../assets/sideArrow2.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: 0.3s all;
+        transform: rotate(180deg);
+        &:hover {
+            transform: rotate(180deg) scale(1.2);
         }
     }
 
@@ -36,43 +54,25 @@
 
     .cart-body {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        flex-flow: row wrap;
-        .cart-details {
-            width: auto;
-            min-width: 400px;
-            border-left: 1px solid var(--color-light);
-            padding: 50px;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        .cart-empty {
             display: flex;
             flex-flow: column;
-            align-items: flex-start;
             gap: 40px;
-            height: 100%;
-            margin-left: auto;
-
-            ul {
-                display: flex;
-                flex-flow: column;
-                gap: 20px;
-                width: 100%;
-                li {
-                    display: flex;
-                    gap: 10px;
-                }
-                border-bottom: solid 1px var(--color-light);
-                padding-bottom: 40px;
+            align-items: flex-start;
+            h3 {
+                font-size: 1.3rem;
             }
-
-            .total-price {
-                
-                font-size: 1rem;
-                span {
-                    font-size: 1.5rem;
-                }
-            }
-
         }
+
+        .cart-list {
+            width: 100%;
+        }
+
     }
 
     .cart-title {

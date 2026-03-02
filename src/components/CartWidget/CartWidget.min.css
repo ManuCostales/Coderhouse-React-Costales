@@ -1,2 +1,2 @@
-.cartwidget{background-image:url("../../assets/cart.svg");background-size:cover;background-position:center;width:40px;height:40px;transition:all .3s ease-out}.cartwidget:hover{background-image:url("../../assets/cart-filled.svg")}
+@import"../../styles/main.scss";.cartwidget{transition:all .3s ease-out;display:flex;align-items:center;gap:10px}.cartwidget span{width:50px;height:50px;background-image:url("../../assets/cart.svg");background-size:cover;background-position:center;transition:all .3s ease-out}.cartwidget:hover span{background-image:url("../../assets/cart-filled.svg")}
 /*# sourceMappingURL=CartWidget.min.css.map */
