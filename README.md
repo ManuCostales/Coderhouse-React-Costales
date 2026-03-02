@@ -13,14 +13,12 @@ Web App
 -Toastify
 -Dot-env
 
-<br>
-
 ## Funcionalidades:
 
 -Ver una lista de distintos productos de carpinteria, con opción de filtrado por categoría.<br>
 -Utilización de un carrito para la compra de uno o mas productos.
 
-# Secciones
+## Secciones
 
 HOMEPAGE ("./") : Hero Section y botones CTA.<br>
 ACERCA DE MI ("/acerca") : Hero Section y contenido acerca de carpintero (A terminar...).<br>
@@ -29,9 +27,7 @@ ITEM DETAIL ("/trabajos/categoria/idProducto") : Vista de un producto con su inf
 CARRITO ("/cart") : Vista del carrito, junto con detalles totales y lista de productos a comprar.<br>
 CHECKOUT ("/checkout") : Form para ingresar detalles del usuario y finalizar la compra.
 
-<br>
-
-# Flujo Principal de la App para Comprar un producto
+## Flujo Principal de la App para Comprar un producto
 
 1 - Ingresar al sitio.<br>
 2 - Ir a "/trabajos".<br>
@@ -45,5 +41,5 @@ CHECKOUT ("/checkout") : Form para ingresar detalles del usuario y finalizar la 
 ## Dominio:
 
 <a href="https://coderhouse-react-costales.vercel.app/" target="_blank" rel="noopener noreferrer">
-  Ver proyecto deployado
+  https://coderhouse-react-costales.vercel.app/
 </a>
